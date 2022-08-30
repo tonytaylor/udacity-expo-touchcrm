@@ -14,5 +14,8 @@ exports[`<App /> renders w/o issue 1`] = `
   <Text>
     Open up App.js to start working on your app!
   </Text>
+  <Text>
+    Does this break the build? (yay)
+  </Text>
 </View>
 `;
