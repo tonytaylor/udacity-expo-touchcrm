@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1662563766366" clover="3.2.0">
-  <project timestamp="1662563766366" name="All files">
-    <metrics statements="169" coveredstatements="102" conditionals="41" coveredconditionals="26" methods="89" coveredmethods="38" elements="299" coveredelements="166" complexity="0" loc="169" ncloc="169" packages="22" files="33" classes="33"/>
+<coverage generated="1662587408166" clover="3.2.0">
+  <project timestamp="1662587408166" name="All files">
+    <metrics statements="204" coveredstatements="135" conditionals="45" coveredconditionals="29" methods="100" coveredmethods="46" elements="349" coveredelements="210" complexity="0" loc="204" ncloc="204" packages="23" files="33" classes="33"/>
     <package name="touchcrm">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="App.js" path="/opt/learnexpo/app/touchcrm/App.js">
@@ -55,25 +55,37 @@
       </file>
     </package>
     <package name="touchcrm.src.features.customer">
-      <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
+      <metrics statements="19" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="11" coveredmethods="6"/>
       <file name="index.js" path="/opt/learnexpo/app/touchcrm/src/features/customer/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="sagas.js" path="/opt/learnexpo/app/touchcrm/src/features/customer/sagas.js">
-        <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
-        <line num="4" count="5" type="stmt"/>
+        <metrics statements="19" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="11" coveredmethods="6"/>
         <line num="8" count="5" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
       </file>
     </package>
     <package name="touchcrm.src.features.customer.components">
-      <metrics statements="57" coveredstatements="43" conditionals="15" coveredconditionals="11" methods="30" coveredmethods="15"/>
+      <metrics statements="59" coveredstatements="43" conditionals="15" coveredconditionals="11" methods="31" coveredmethods="14"/>
       <file name="CustomerForm.js" path="/opt/learnexpo/app/touchcrm/src/features/customer/components/CustomerForm.js">
-        <metrics statements="30" coveredstatements="27" conditionals="13" coveredconditionals="10" methods="14" coveredmethods="12"/>
+        <metrics statements="30" coveredstatements="27" conditionals="13" coveredconditionals="10" methods="14" coveredmethods="11"/>
         <line num="8" count="3" type="stmt"/>
         <line num="19" count="3" type="stmt"/>
         <line num="20" count="6" type="stmt"/>
@@ -135,14 +147,42 @@
         <line num="33" count="2" type="stmt"/>
       </file>
       <file name="customerSlice.js" path="/opt/learnexpo/app/touchcrm/src/features/customer/components/customerSlice.js">
-        <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <metrics statements="9" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="3" count="3" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="38" count="3" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="touchcrm.src.features.storage">
+      <metrics statements="20" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+      <file name="index.js" path="/opt/learnexpo/app/touchcrm/src/features/storage/index.js">
+        <metrics statements="20" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
       </file>
     </package>
     <package name="touchcrm.src.features.welcome">
@@ -154,9 +194,6 @@
         <line num="7" count="4" type="stmt"/>
         <line num="9" count="4" type="stmt"/>
         <line num="15" count="2" type="stmt"/>
-      </file>
-      <file name="styles.js" path="/opt/learnexpo/app/touchcrm/src/features/welcome/styles.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="touchcrm.src.navigation">
@@ -223,28 +260,29 @@
       </file>
     </package>
     <package name="touchcrm.src.screens.customer.ViewAll">
-      <metrics statements="7" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="2"/>
+      <metrics statements="9" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="3"/>
       <file name="index.js" path="/opt/learnexpo/app/touchcrm/src/screens/customer/ViewAll/index.js">
-        <metrics statements="7" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="2"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
+        <metrics statements="9" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="3"/>
+        <line num="12" count="2" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
       </file>
     </package>
     <package name="touchcrm.src.screens.customer.ViewOne">
-      <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="index.js" path="/opt/learnexpo/app/touchcrm/src/screens/customer/ViewOne/index.js">
-        <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="8" count="2" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
       </file>
     </package>
     <package name="touchcrm.src.screens.home">
@@ -295,16 +333,16 @@
       </file>
     </package>
     <package name="touchcrm.src.store">
-      <metrics statements="16" coveredstatements="10" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="6"/>
+      <metrics statements="16" coveredstatements="16" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="7"/>
       <file name="index.js" path="/opt/learnexpo/app/touchcrm/src/store/index.js">
-        <metrics statements="15" coveredstatements="9" conditionals="3" coveredconditionals="3" methods="6" coveredmethods="5"/>
+        <metrics statements="15" coveredstatements="15" conditionals="3" coveredconditionals="3" methods="6" coveredmethods="6"/>
         <line num="8" count="5" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
         <line num="17" count="3" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>

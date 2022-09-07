@@ -2,20 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const customerSlice = createSlice({
   name: 'customers',
-  initialState: {
-    test: {
-      firstName: 'Rob',
-      lastName: 'Johnson',
-      email: 'robj@example.com',
-      created: Date.now(),
-      salesRegion: 'e',
-      source: 'none',
-      id: 'test',
-      phoneNumber: '+0 912 166 8280'
-    }
-  },
+  initialState: {},
   reducers: {
     add(state, action) {
+      console.log('incoming action:', action.payload.id);
       return {
         ...state,
         [action.payload.id]: action.payload
@@ -24,6 +14,12 @@ const customerSlice = createSlice({
     remove(state, action) {
       const filtered = Object.entries(state).filter(([k]) => k !== action.payload.id);
       return Object.fromEntries(filtered);
+    },
+    load(state, action) {
+      return {
+        ...state,
+        ...action.payload
+      };
     },
     update(state, action) {
       const filtered = Object.fromEntries(Object.entries(state).filter(([k]) => k !== action.payload.id));
@@ -35,6 +31,6 @@ const customerSlice = createSlice({
   }
 });
 
-export const { add, remove, update } = customerSlice.actions;
+export const { add, load, remove, update } = customerSlice.actions;
 
 export default customerSlice.reducer;

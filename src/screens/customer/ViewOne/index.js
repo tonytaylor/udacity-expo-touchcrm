@@ -17,7 +17,6 @@ const ViewOneCustomer = ({ customer, route, navigation }) => {
 
 const mapStateToProps = ({ customers }, { route, navigation }) => {
   const customer = Object.values(customers).filter((customer) => customer.id === route.params.id)[0];
-  console.log('display customer', customer);
   return { route, customer, navigation };
 };
 
