@@ -388,6 +388,39 @@ exports[`<App /> renders w/o issue 1`] = `
                               }
                             }
                           >
+                            RESET STORAGE
+                          </Text>
+                        </View>
+                        <View
+                          accessible={true}
+                          collapsable={false}
+                          focusable={true}
+                          onClick={[Function]}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "backgroundColor": "#990099",
+                              "marginTop": "5%",
+                              "opacity": 1,
+                              "padding": 12,
+                              "width": "100%",
+                            }
+                          }
+                          testID="TouchCRM.Button"
+                        >
+                          <Text
+                            style={
+                              Object {
+                                "color": "white",
+                                "textAlign": "center",
+                              }
+                            }
+                          >
                             PRESS TO ENTER
                           </Text>
                         </View>

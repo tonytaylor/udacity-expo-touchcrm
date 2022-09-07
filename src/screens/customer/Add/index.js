@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import CustomerForm from "../../../features/customer/components/CustomerForm";
 import { getCustomerFields } from "../../../features/customer/components/CustomerForm";
 
-import { add, update } from '../../../features/customer/components/customerSlice';
+import { add, update } from '../../../features/customer/customerSlice';
 import { generateUID } from "../../../features/customer/components/CustomerProfile";
 import { getRandomSalesRegion } from "../../../utils/_DATA";
 import styles from "../../../components/styles";
