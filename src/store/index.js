@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, combineReducers } from "@reduxjs/toolkit";
+import {createStore, applyMiddleware, combineReducers, createReducer} from "@reduxjs/toolkit";
 import createSagaMiddleware from 'redux-saga';
 import { isEmpty } from 'ramda';
 
@@ -14,10 +14,17 @@ export const logger = (store) => (next) => (action) => {
   return result;
 };
 
+const createMockReducer = (initialState) => {
+  return createReducer(initialState, (state) => {
+    return state;
+  });
+}
+
+
 const initializeStore = (state = {}) => {
   const sagaMiddleware = createSagaMiddleware();
   const store = createStore(
-    combineReducers((isEmpty(state)) ? reducer : state),
+    (isEmpty(state)) ? combineReducers(reducer) : createMockReducer(state),
     applyMiddleware(sagaMiddleware, logger)
   );
   sagaMiddleware.run(rootSaga);

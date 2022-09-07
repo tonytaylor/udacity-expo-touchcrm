@@ -4,6 +4,7 @@ import Support from "./support";
 
 import AddCustomer from "./customer/Add";
 import ViewAllCustomers from "./customer/ViewAll";
+import ViewOneCustomer from "./customer/ViewOne";
 import ViewAllRegions from "./region/ViewAll";
 
 export default {
@@ -14,6 +15,7 @@ export default {
   },
   auth: {
     Customers: ViewAllCustomers,
+    Customer: ViewOneCustomer,
     Regions: ViewAllRegions,
     AddCustomer
   }

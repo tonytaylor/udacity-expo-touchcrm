@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { connect } from "react-redux";
 
@@ -12,9 +12,12 @@ const Login = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
+      <Image
+        style={{ width: 260, height: 260, resizeMode: 'contain' }}
+        source={require('../../../assets/login-icon.png')} />
       <Text testID={route && route.name}>login</Text>
-      <Btn title={"login for real"} onPress={() => login("foo")} />
-      <Btn title={"get support information"} onPress={() => navigation.navigate("Support")} />
+      <Btn title={"LOGIN"} onPress={() => login({value: true})} />
+      <Btn title={"GET SUPPORT"} onPress={() => navigation.navigate("Support")} />
       <StatusBar style={"auto"} />
     </View>
   )

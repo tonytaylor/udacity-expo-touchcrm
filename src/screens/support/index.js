@@ -9,8 +9,8 @@ const Support = ({ navigation, route }) => {
   return (
     <View style={styles.container}>
       <Text testID={route && route.name}>support</Text>
-      <Btn title={"Go Home"} onPress={() => navigation.navigate("Home")} />
-      <Btn title={"Sign In"} onPress={() => navigation.navigate("Login")} />
+      <Btn title={"GO BACK HOME"} onPress={() => navigation.navigate("Home")} />
+      <Btn title={"GO TO LOGIN"} onPress={() => navigation.navigate("Login")} />
       <StatusBar style={"auto"} />
     </View>
   );

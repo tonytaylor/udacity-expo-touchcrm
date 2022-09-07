@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">37.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/3</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>3/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
-                <span class="quiet">Functions</span>
+                <span class="quiet">Branches</span>
                 <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">37.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/8</span>
             </div>
         
             
@@ -79,46 +79,70 @@
 <a name='L14'></a><a href='#L14'>14</a>
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
-<a name='L17'></a><a href='#L17'>17</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const generateUID = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  return Math.random()</span>
-    .toString(36)
-    .substring(2, 15) + Math.random()
-    .toString(36)
-    .substring(2, 15);
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+export const salesRegions = {
+  s: 'Southern',
+  se: 'Southeastern',
+  e: 'Eastern',
+  ne: 'Northeastern',
+  n: 'Northern',
+  nw: 'Northwestern',
+  w: 'Western',
+  sw: 'Southwestern'
 };
 &nbsp;
-const customer = <span class="cstat-no" title="statement not covered" >{</span>
-  contactInfo: {
-    socialMedia: [],
-    extraInfo: []
-  },
-  personalInfo: {},
-  sourceInfo: {},
-  activities: {},
-}</pre></td></tr></table></pre>
+const performRandomRegionLookup = <span class="fstat-no" title="function not covered" >(r</span>egions = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> =&gt; {
+  const regionIds = <span class="cstat-no" title="statement not covered" >Object.keys(regions);</span>
+  const min = <span class="cstat-no" title="statement not covered" >Math.ceil(0);</span>
+  const idx = <span class="cstat-no" title="statement not covered" >Math.floor(Math.random() * (Math.floor(regionIds.length) - min) + min);</span>
+<span class="cstat-no" title="statement not covered" >  return { regionId: regionIds[idx], regionName: regions[regionIds[idx]] };</span>
+};
+&nbsp;
+export const getRandomSalesRegion = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >  return performRandomRegionLookup(salesRegions);</span>
+};
+&nbsp;
+&nbsp;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-09-01T15:53:59.734Z
+                at 2022-09-07T03:38:33.390Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
