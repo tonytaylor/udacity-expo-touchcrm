@@ -1,5 +1,8 @@
 import 'react-native-gesture-handler/jestSetup';
 
+global.window = {};
+global.window = global;
+
 jest.mock('react-native-reanimated', () => {
   const Reanimated = require('react-native-reanimated/mock');
 

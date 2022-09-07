@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 import Btn from '../../components/button';
@@ -7,8 +7,11 @@ import styles from "../../components/styles";
 const Home = ({ navigation, route }) => {
   return (
     <View style={styles.container}>
-      <Text testID={route && route.name}>Welcome home</Text>
-      <Btn title={"sign in"} onPress={() => navigation.navigate("Login")} />
+      <Image
+        style={{ width: 260, height: 260, resizeMode: 'contain' }}
+        source={require('../../../assets/welcome-icon.png')} />
+      <Text testID={route && route.name} style={styles.testing}>Welcome home</Text>
+      <Btn title={"PRESS TO ENTER"} onPress={() => navigation.navigate("Login")} />
       <StatusBar style={"auto"} />
     </View>
   );

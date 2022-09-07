@@ -18,7 +18,7 @@ describe('<AppNavigation />', () => {
 
   it('renders the Customers route when authenticated', async () => {
     const { getByTestId } = render(
-      <Provider store={initializeStore({ auth: { value : 'foo' }})}>
+      <Provider store={initializeStore({ auth: { value : 'foo' }, customers: {}})}>
         <AppNavigation />
       </Provider>
     );
