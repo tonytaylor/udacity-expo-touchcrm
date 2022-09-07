@@ -6,7 +6,7 @@ import Btn from "../../../components/button";
 import styles from "../../../components/styles";
 
 import { useAuth } from "../../../features/auth/hooks";
-import CustomerList from "../../../features/customer/CustomerList";
+import CustomerList from "../../../features/customer/components/CustomerList";
 
 const ViewAllCustomers = ({ navigation, route }) => {
   const { logout } = useAuth();

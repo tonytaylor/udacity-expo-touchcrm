@@ -2,11 +2,11 @@ import { View, Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { connect } from "react-redux";
 
-import CustomerForm from "../../../features/customer/CustomerForm";
-import { getCustomerFields } from "../../../features/customer/CustomerForm";
+import CustomerForm from "../../../features/customer/components/CustomerForm";
+import { getCustomerFields } from "../../../features/customer/components/CustomerForm";
 
-import { add, update } from '../../../features/customer/customerSlice';
-import { generateUID } from "../../../features/customer/CustomerProfile";
+import { add, update } from '../../../features/customer/components/customerSlice';
+import { generateUID } from "../../../features/customer/components/CustomerProfile";
 import { getRandomSalesRegion } from "../../../utils/_DATA";
 import styles from "../../../components/styles";
 
