@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for touchcrm/src/screens/customer/Add/index.js</title>
+    <title>Code coverage report for touchcrm/src/features/customer/components/CustomerList.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../../../index.html">All files</a> / <a href="index.html">touchcrm/src/screens/customer/Add</a> index.js</h1>
+        <h1><a href="../../../../../index.html">All files</a> / <a href="index.html">touchcrm/src/features/customer/components</a> CustomerList.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">73.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/10</span>
+                <span class='fraction'>11/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">42.85% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">22.22% </span>
+                <span class="strong">90.9% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/9</span>
+                <span class='fraction'>10/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -112,27 +112,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -141,46 +135,52 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { View, Text } from "react-native";
-import { StatusBar } from "expo-status-bar";
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { View, Text, SafeAreaView, FlatList, SectionList } from "react-native";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 &nbsp;
-import CustomerForm from "../../../features/customer/components/CustomerForm";
-import { getCustomerFields } from "../../../features/customer/components/CustomerForm";
+import CustomerListEntry from "./CustomerListEntry";
+import CustomerProfile from "./CustomerProfile";
 &nbsp;
-import { add, update } from '../../../features/customer/components/customerSlice';
-import { generateUID } from "../../../features/customer/components/CustomerProfile";
-import { getRandomSalesRegion } from "../../../utils/_DATA";
+import { salesRegions } from "../../../utils/_DATA";
 import styles from "../../../components/styles";
 &nbsp;
-const AddCustomer = <span class="fstat-no" title="function not covered" >({</span> navigation, route, dispatch }) =&gt; {
-  const onSubmit = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    if (route.params) {</span>
-<span class="cstat-no" title="statement not covered" >      dispatch(update(data));</span>
-    } else {
-      const customer = <span class="cstat-no" title="statement not covered" >Object.assign(data, {</span>
-        id: generateUID(),
-        source: 'website',
-        created: Date.now(),
-        salesRegion: getRandomSalesRegion().regionId
-      });
-<span class="cstat-no" title="statement not covered" >      dispatch(add(customer));</span>
-    }
-<span class="cstat-no" title="statement not covered" >    navigation.navigate('Customers');</span>
-  };
-<span class="cstat-no" title="statement not covered" >  return (</span>
-    &lt;View style={{ backgroundColor: '#ccc', marginLeft: 8, marginRight: 8 }}&gt;
-      {/* TODO: Find a better way to maintain testIDs while introducing minimal noise. */}
-      &lt;Text testID={route &amp;&amp; route.name} style={styles.testing}&gt;add customer&lt;/Text&gt;
-      &lt;CustomerForm formConfig={getCustomerFields()} saveCustomer={onSubmit} route={route} /&gt;
-      &lt;StatusBar style={"auto"} /&gt;
-    &lt;/View&gt;
-  );
+const CustomerList = ({ customers }) =&gt; {
+  const customersByRegion = Object.entries(salesRegions).reduce((p, c) =&gt; {
+    const [regionId, regionTitle] = c;
+    const groupedCustomers = Object.values(customers).filter(<span class="fstat-no" title="function not covered" >(c</span>ustomer) =&gt; <span class="cstat-no" title="statement not covered" >customer.salesRegion === regionId)</span>;
+    return (groupedCustomers.length &gt; 0) ?
+<span class="branch-0 cbranch-no" title="branch not covered" >      p.concat([{ title: regionTitle, data: groupedCustomers }]) </span>: p.concat([]);
+  }, []);
+  const onItemRender = <span class="fstat-no" title="function not covered" >({</span> item }) =&gt; <span class="cstat-no" title="statement not covered" >&lt;CustomerListEntry customer={item} /&gt;;</span>
+  const onSectionRender = <span class="fstat-no" title="function not covered" >({</span> section: { title } }) =&gt; (<span class="cstat-no" title="statement not covered" >&lt;Text style={styles.textMedium}&gt;{title}&lt;/Text&gt;)</span>;
+  return (
+    &lt;SafeAreaView style={{ width: '100%' }}&gt;
+      &lt;SectionList
+        renderSectionHeader={onSectionRender}
+        renderItem={onItemRender}
+        keyExtractor={<span class="fstat-no" title="function not covered" >(i</span>tem, index) =&gt; <span class="cstat-no" title="statement not covered" >index}</span>
+        sections={customersByRegion} /&gt;
+      {/*&lt;FlatList data={Object.values(customers)} renderItem={onItemRender} keyExtractor={(c) =&gt; c.id} /&gt;*/}
+    &lt;/SafeAreaView&gt;
+  )
 };
 &nbsp;
-const mapStateToProps = <span class="fstat-no" title="function not covered" >(s</span>tate, { navigation, route, dispatch }) =&gt; (<span class="cstat-no" title="statement not covered" >{ route, dispatch, navigation })</span>;
+CustomerList.propTypes = {
+  customers: PropTypes.objectOf(CustomerProfile.propTypes.customer)
+};
 &nbsp;
-export default connect(mapStateToProps)(AddCustomer);</pre></td></tr></table></pre>
+const mapStateToProps = ({ customers }) =&gt; ({ customers });
+&nbsp;
+export default connect(mapStateToProps)(CustomerList);
+&nbsp;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

@@ -4,7 +4,7 @@ import '@testing-library/jest-native/extend-expect';
 import { Provider } from "react-redux";
 import {Route} from "@react-navigation/native";
 
-import initializeStore from "../../store";
+import initializeStore from "../../../store";
 
 import CustomerForm from "./CustomerForm";
 

@@ -3,7 +3,7 @@ import { zip, flatten, compose } from "ramda";
 import { useForm, Controller } from "react-hook-form";
 import { connect } from "react-redux";
 
-import styles from "../../components/styles";
+import styles from "../../../components/styles";
 
 const testNS = 'TouchCRM.CustomerForm';
 

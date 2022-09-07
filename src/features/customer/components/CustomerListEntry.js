@@ -1,7 +1,7 @@
 import { View, Text, Image } from "react-native";
 import { Link } from '@react-navigation/native';
 
-import styles from "../../components/styles";
+import styles from "../../../components/styles";
 
 const CustomerListEntry = ({ customer }) => {
   return (
@@ -11,7 +11,7 @@ const CustomerListEntry = ({ customer }) => {
           <View style={{ justifyContent: 'space-around', paddingLeft: 6 }}>
             <Image
               style={{ width: 40, height: 40, resizeMode: 'contain' }}
-              source={require('../../../assets/img_avatar.png')} />
+              source={require('../../../../assets/img_avatar.png')} />
           </View>
           <View style={{ justifyContent: 'space-around', padding: 12 }}>
             <Text>{`${customer.lastName}, ${customer.firstName}`}</Text>

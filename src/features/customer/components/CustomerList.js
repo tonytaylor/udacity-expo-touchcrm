@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 import CustomerListEntry from "./CustomerListEntry";
 import CustomerProfile from "./CustomerProfile";
 
-import { salesRegions } from "../../utils/_DATA";
-import styles from "../../components/styles";
+import { salesRegions } from "../../../utils/_DATA";
+import styles from "../../../components/styles";
 
 const CustomerList = ({ customers }) => {
   const customersByRegion = Object.entries(salesRegions).reduce((p, c) => {

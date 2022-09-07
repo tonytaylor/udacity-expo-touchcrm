@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-import CustomerProfile from "../../../features/customer/CustomerProfile";
+import CustomerProfile from "../../../features/customer/components/CustomerProfile";
 import styles from "../../../components/styles";
 
 const ViewOneCustomer = ({ customer, route, navigation }) => {

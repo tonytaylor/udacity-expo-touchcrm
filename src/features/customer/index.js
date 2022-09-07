@@ -1,7 +1,7 @@
-import CustomerProfile from "./CustomerProfile";
-import CustomerList from "./CustomerList";
-import CustomerListEntry from "./CustomerListEntry";
-import CustomerForm from "./CustomerForm";
+import CustomerProfile from "./components/CustomerProfile";
+import CustomerList from "./components/CustomerList";
+import CustomerListEntry from "./components/CustomerListEntry";
+import CustomerForm from "./components/CustomerForm";
 
 
 export default {

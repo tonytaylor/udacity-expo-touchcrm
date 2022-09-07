@@ -2,9 +2,9 @@ import { View, Text, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import PropTypes from 'prop-types';
 
-import Btn from "../../components/button";
-import styles from "../../components/styles";
-import { salesRegions } from "../../utils/_DATA";
+import Btn from "../../../components/button";
+import styles from "../../../components/styles";
+import { salesRegions } from "../../../utils/_DATA";
 
 export const generateUID = () => {
   return Math.random()
@@ -19,7 +19,7 @@ const CustomerProfile = ({ customer }) => {
   return (
     <View style={styles.container}>
       <Image style={{ width: 280, height: 280, resizeMode: 'contain' }}
-             source={require('../../../assets/img_avatar.png')} />
+             source={require('../../../../assets/img_avatar.png')} />
       <Text>{customer.email}</Text>
       <Text>Region: {salesRegions[customer.salesRegion]}</Text>
       <Text>Phone Number: {customer.phoneNumber}</Text>
