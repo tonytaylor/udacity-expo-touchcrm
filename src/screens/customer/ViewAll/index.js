@@ -1,6 +1,7 @@
 import { View, Text } from "react-native";
 import { connect } from "react-redux";
 import { StatusBar } from "expo-status-bar";
+import { useEffect } from "react";
 
 import Btn from "../../../components/button";
 import styles from "../../../components/styles";
@@ -8,7 +9,10 @@ import styles from "../../../components/styles";
 import { useAuth } from "../../../features/auth/hooks";
 import CustomerList from "../../../features/customer/components/CustomerList";
 
-const ViewAllCustomers = ({ navigation, route }) => {
+const ViewAllCustomers = ({ navigation, route, dispatch }) => {
+  useEffect(() => {
+    dispatch({ type: 'customers/storageRequest', action: {} });
+  }, []);
   const { logout } = useAuth();
   return (
     <View style={styles.container}>
@@ -22,6 +26,6 @@ const ViewAllCustomers = ({ navigation, route }) => {
   );
 };
 
-const mapStateToProps = (state, { navigation, route }) => ({ route, navigation });
+const mapStateToProps = (state, { navigation, route, dispatch }) => ({ route, navigation, dispatch });
 
 export default connect(mapStateToProps)(ViewAllCustomers);
