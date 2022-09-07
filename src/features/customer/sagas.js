@@ -2,7 +2,7 @@ import { takeEvery, actionChannel, call, all, put, select } from 'redux-saga/eff
 
 import { initializeStorage, readFromStorage, writeToStorage, clearStorage } from "../storage";
 
-import { add, remove, load } from "./components/customerSlice";
+import { add, remove, load } from "./customerSlice";
 
 export function* watchFetchCustomers() {
   yield takeEvery('customers/storageRequest', fetchCustomers);
