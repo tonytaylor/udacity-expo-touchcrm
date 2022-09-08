@@ -33,8 +33,8 @@ $ npm start
 ## A few notes
 
 - There is login screen behind the Welcome screen
-- a random region is assigned to customer records upon creation - region information can not be edited on update
-
+- Push Notifications can be scheduled on the ViewCustomer screen. Please make sure to close the app or move to the background after scheduling.
+- A random region is assigned to customer records upon creation - region information can not be edited on update
 
 
 
