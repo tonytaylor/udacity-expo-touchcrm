@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import SimpleCustomerNotification from "../../notifications/components/SimpleCustomerNotification";
 import Btn from "../../../components/button";
 import styles from "../../../components/styles";
-import { salesRegions } from "../../../utils/_DATA";
+import { salesRegions } from "../../../utilities/_DATA";
 
 export const generateUID = () => {
   return Math.random()

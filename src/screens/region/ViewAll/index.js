@@ -2,7 +2,7 @@ import { View, Text, FlatList } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 import styles from "../../../components/styles";
-import { salesRegions } from "../../../utils/_DATA";
+import { salesRegions } from "../../../utilities/_DATA";
 
 const ViewAllRegions = ({ route }) => {
   return (

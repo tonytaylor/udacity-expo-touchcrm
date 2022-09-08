@@ -7,7 +7,7 @@ import { getCustomerFields } from "../../../features/customer/components/Custome
 
 import { add, update } from '../../../features/customer/customerSlice';
 import { generateUID } from "../../../features/customer/components/CustomerProfile";
-import { getRandomSalesRegion } from "../../../utils/_DATA";
+import { getRandomSalesRegion } from "../../../utilities/_DATA";
 import styles from "../../../components/styles";
 
 const AddCustomer = ({ navigation, route, dispatch }) => {
