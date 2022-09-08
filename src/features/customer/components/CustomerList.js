@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import CustomerListEntry from "./CustomerListEntry";
 import CustomerProfile from "./CustomerProfile";
 
-import { salesRegions } from "../../../utils/_DATA";
+import { salesRegions } from "../../../utilities/_DATA";
 import styles from "../../../components/styles";
 
 const CustomerList = ({ customers }) => {
