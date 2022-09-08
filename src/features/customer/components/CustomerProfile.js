@@ -2,6 +2,7 @@ import { View, Text, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import PropTypes from 'prop-types';
 
+import SimpleCustomerNotification from "../../notifications/components/SimpleCustomerNotification";
 import Btn from "../../../components/button";
 import styles from "../../../components/styles";
 import { salesRegions } from "../../../utils/_DATA";
@@ -26,6 +27,7 @@ const CustomerProfile = ({ customer }) => {
       <Btn
         title={'EDIT RECORD'}
         onPress={() => navigation.navigate({ name: 'AddCustomer', params: { id: customer.id }})} />
+      <SimpleCustomerNotification customer={customer} />
     </View>
   );
 };
