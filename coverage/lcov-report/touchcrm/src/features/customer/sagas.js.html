@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">65% </span>
+                <span class="strong">72.22% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/20</span>
+                <span class='fraction'>13/18</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">54.54% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/11</span>
+                <span class='fraction'>6/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">68.42% </span>
+                <span class="strong">76.47% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/19</span>
+                <span class='fraction'>13/17</span>
             </div>
         
             
@@ -120,26 +120,7 @@
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a>
-<a name='L77'></a><a href='#L77'>77</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -154,36 +135,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -215,7 +177,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { takeEvery, actionChannel, call, all, put, select } from 'redux-saga/effects';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { takeEvery, actionChannel, call, all, put, select, fork, join, take } from 'redux-saga/effects';
 &nbsp;
 import { initializeStorage, readFromStorage, writeToStorage, clearStorage } from "../storage";
 &nbsp;
@@ -230,37 +192,18 @@ export function* watchCreateCustomer() {
 }
 &nbsp;
 export function* watchUpdateCustomer() {
-  yield takeEvery('customers/update', addCustomerToStorage);
-  // TODO: Look into the feasibility of composing a set of actions.
-  //       We have the add and remove actions.  Update is simply a sequence of those actions.
-  //       I'm fairly sure it can be done in a saga, but missing critical details.
-  /*const updates = yield actionChannel('customers/update');
-  while (true) {
-    const { payload } = yield take(updates);
-    // this is a blocking call.
-    yield call(outWithOldInWithNew, payload);
-  }*/
+  //yield takeEvery('customers/update', addCustomerToStorage);
+  yield takeEvery('customers/update', outWithOldInWithNew);
 }
 &nbsp;
-function* <span class="fstat-no" title="function not covered" >outWithOldInWithNew(</span>payload) {
-  // we intend to effect the customer remove and add actions to
-  // implement the update action
-<span class="cstat-no" title="statement not covered" >  console.log('update occurred with payload:', payload);</span>
-<span class="cstat-no" title="statement not covered" >  yield all([</span>
-    put(remove(payload)),
-    put(add(payload))
-  ]);
-  /*const removalTask = yield fork(clearExistingCustomerRecordMatching, payload);
-  const replaceTask = yield fork(replaceCustomerRecordWith, payload);*/
+function* <span class="fstat-no" title="function not covered" >outWithOldInWithNew(</span>action) {
+  //console.log('update occurred with payload:', action.payload);
+<span class="cstat-no" title="statement not covered" >  yield put(remove(action));</span>
+  // TODO: Look into the cause of what's occurring below. The action object
+  //       has a `payload` in its `payload` at this point. Works without issue, otherwise.
+<span class="cstat-no" title="statement not covered" >  yield put(add(action.payload));</span>
 }
 &nbsp;
-function* <span class="fstat-no" title="function not covered" >clearExistingCustomerRecordMatching(</span>payload) {
-<span class="cstat-no" title="statement not covered" >  yield put(remove(payload));</span>
-}
-&nbsp;
-function* <span class="fstat-no" title="function not covered" >replaceCustomerRecordWith(</span>payload) {
-<span class="cstat-no" title="statement not covered" >  yield put(add(payload));</span>
-}
 &nbsp;
 function* readAndLoad() {
   try {
@@ -298,7 +241,7 @@ function* <span class="fstat-no" title="function not covered" >addCustomerToStor
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-09-08T01:06:51.571Z
+                at 2022-09-09T15:04:54.406Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
