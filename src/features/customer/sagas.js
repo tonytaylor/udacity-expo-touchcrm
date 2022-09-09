@@ -1,4 +1,4 @@
-import { takeEvery, actionChannel, call, all, put, select } from 'redux-saga/effects';
+import { takeEvery, actionChannel, call, all, put, select, fork, join, take } from 'redux-saga/effects';
 
 import { initializeStorage, readFromStorage, writeToStorage, clearStorage } from "../storage";
 
@@ -13,37 +13,18 @@ export function* watchCreateCustomer() {
 }
 
 export function* watchUpdateCustomer() {
-  yield takeEvery('customers/update', addCustomerToStorage);
-  // TODO: Look into the feasibility of composing a set of actions.
-  //       We have the add and remove actions.  Update is simply a sequence of those actions.
-  //       I'm fairly sure it can be done in a saga, but missing critical details.
-  /*const updates = yield actionChannel('customers/update');
-  while (true) {
-    const { payload } = yield take(updates);
-    // this is a blocking call.
-    yield call(outWithOldInWithNew, payload);
-  }*/
+  //yield takeEvery('customers/update', addCustomerToStorage);
+  yield takeEvery('customers/update', outWithOldInWithNew);
 }
 
-function* outWithOldInWithNew(payload) {
-  // we intend to effect the customer remove and add actions to
-  // implement the update action
-  console.log('update occurred with payload:', payload);
-  yield all([
-    put(remove(payload)),
-    put(add(payload))
-  ]);
-  /*const removalTask = yield fork(clearExistingCustomerRecordMatching, payload);
-  const replaceTask = yield fork(replaceCustomerRecordWith, payload);*/
+function* outWithOldInWithNew(action) {
+  //console.log('update occurred with payload:', action.payload);
+  yield put(remove(action));
+  // TODO: Look into the cause of what's occurring below. The action object
+  //       has a `payload` in its `payload` at this point. Works without issue, otherwise.
+  yield put(add(action.payload));
 }
 
-function* clearExistingCustomerRecordMatching(payload) {
-  yield put(remove(payload));
-}
-
-function* replaceCustomerRecordWith(payload) {
-  yield put(add(payload));
-}
 
 function* readAndLoad() {
   try {

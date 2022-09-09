@@ -22,11 +22,12 @@ const customerSlice = createSlice({
       };
     },
     update(state, action) {
-      const filtered = Object.fromEntries(Object.entries(state).filter(([k]) => k !== action.payload.id));
+      return state;
+      /*const filtered = Object.fromEntries(Object.entries(state).filter(([k]) => k !== action.payload.id));
       return {
         ...filtered,
         [action.payload.id]: action.payload
-      };
+      };*/
     }
   }
 });
